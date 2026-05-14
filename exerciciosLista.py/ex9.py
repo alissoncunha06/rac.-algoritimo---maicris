@@ -31,4 +31,3 @@ print(quadrados)
 
 print("=-=" * 10, "SOMA DOS QUADRADOS", "=-=" * 10)
 print(f"Soma dos quadrados: {soma_quadrados}")
-
