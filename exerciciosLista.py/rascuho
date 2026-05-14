@@ -1,0 +1,23 @@
+# ===== PARTE 1: Criar as listas vazias =====
+nomes = []      # lista simples pros nomes
+notas = []      # lista de listas (a matriz) pras notas
+
+# ===== PARTE 2: Pedir os dados de 2 alunos =====
+for i in range(2):                    # repete 2 vezes (i = 0, depois i = 1)
+    print(f"\n--- Aluno {i+1} ---")   # i+1 só pra mostrar "1" e "2" em vez de "0" e "1"
+    
+    nome = input("Digite o nome: ")
+    nomes.append(nome)                # adiciona o nome na lista de nomes
+    
+    # Agora vamos pegar as 4 notas desse aluno
+    linha = []                        # lista temporária pra guardar as 4 notas
+    for j in range(4):                # repete 4 vezes (j = 0, 1, 2, 3)
+        nota = float(input(f"Digite a nota {j+1}: "))
+        linha.append(nota)            # adiciona a nota na linha
+    
+    notas.append(linha)               # adiciona a linha inteira na matriz
+
+# ===== PARTE 3: Mostrar tudo =====
+print("\n===== RESULTADO =====")
+for i in range(len(nomes)):           # percorre cada aluno
+    print(f"{nomes[i]}: {notas[i]}")
