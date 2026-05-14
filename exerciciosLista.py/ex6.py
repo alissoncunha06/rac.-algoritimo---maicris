@@ -1,7 +1,7 @@
 nomes = [] #criar a lista de nomes
 notas = [] #criar a lista de notas (que vai ser uma matriz)
 
-for i in range(10): #repete tudo que está dentro desse for 10 vezes
+for i in range(2): #repete tudo que está dentro desse for 10 vezes
     nome = input("Insira o nome do aluno: ") #pega o nome do aluno 
     nomes.append(nome) #coloca o nome desse aluno na lista nomes
 
@@ -17,4 +17,6 @@ for i in range(len(nomes)): #percorrer cada aluno, i = 0 -> o aluno no index 0 e
     for nota in notas[i]: #vai percorrer notas[i], ou seja, a linha daquele aluno, que tem as 4 notas, e vai pegar cada nota dessa linha 
         soma += nota
     media = soma / len(notas[i])
-    print(f"{nomes[i]}: {notas[i]} - média: {media:.2f}")  
+    if media >= 7:
+        print("=-=" *10, "APROVADO(s)", "=-=" *10)
+        print(f"{nomes[i]}: {notas[i]} - média: {media:.2f}")
