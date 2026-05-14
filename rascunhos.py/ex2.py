@@ -2,7 +2,7 @@ lista = []
 print('=-' * 20)
 while True:
     try:
-        num = float(input('digite um valor: '))
+        num = int(input('digite um valor: '))
         if num not in lista:
             lista.append(num)
         else:
