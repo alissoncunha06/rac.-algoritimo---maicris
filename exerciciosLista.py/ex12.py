@@ -34,9 +34,10 @@ def media(alunos):
   return sum(altura) / len(altura)
 
 media_altura = media(alunos)
-
+print()
 # [0] é nome, [1] é idade e [2] é altura
 print(alunos)
+print()
 for pessoa in alunos:
   if pessoa[1] > 13:
     if pessoa[2] < media_altura:
