@@ -25,11 +25,14 @@ media = calcular_media(temperaturas)
 print()
 print(media) #checar- debug
 print()
-meses_acima = []
+acima = []
+for i, temp in range(len(temperaturas)):
+  if temp > media:
+    acima.append(meses[i], temp)
 
-for i in range(len(meses)):
-  if temperaturas[i] > media:
-    meses_acima.append(meses[i])
+if not acima:
+  print(f"Nenhum mes ficou acima da média de {media:.f}C")
+else:
+  #terminar o codigo. 
 
-print(meses_acima)
-print()
+#falta printar o mes-temperatura acima da média {informar media}
