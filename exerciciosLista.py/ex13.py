@@ -25,11 +25,7 @@ media = calcular_media(temperaturas)
 print()
 print(media) #checar- debug
 print()
-meses_acima = []
-
 for i in range(len(temperaturas)):
   if temperaturas[i] > media:
-    meses_acima.append(meses[i])
-
-print(meses_acima)
+    
 print()
