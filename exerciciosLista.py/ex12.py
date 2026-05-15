@@ -41,6 +41,5 @@ for pessoa in alunos:
   if pessoa[1] > 13:
     if pessoa[2] < media_altura:
       print(f"{pessoa[0]} tem a altura de {pessoa[2]} inferior a média {media_altura:.1f}")
-print(f"\nTotal: {contador} aluno(s) com mais de 13 anos e altura abaixo da média")
 
 print()
