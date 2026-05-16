@@ -36,7 +36,7 @@ while True:
     print("Digite s ou n")
 
 while True:
-  dever = input("Devia para a vítima? (s/n) ")
+  dever = input("Devia para a vítima? (s/n): ")
   if dever == "s" or dever == "n":
     lista.append(dever)
     break
