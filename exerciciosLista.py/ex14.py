@@ -21,7 +21,7 @@ while True:
 
 while True:
   local = input("Esteve no local do crime? (s/n): ")
-  if contato =="s" or contato == "n":
+  if local =="s" or local == "n":
     lista.append(local)
     break
   else:
