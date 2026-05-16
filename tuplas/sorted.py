@@ -4,7 +4,8 @@ aula sobre tuplas, usa-se variáveis compostas, as tuplas são imutáveis.
 print()
 lanche = ("hamburger", "suco", "pizza", "pudim")
 
-for i in range(len(lanche)):
-  print(f"{i + 1}- {lanche[i]}")
+print(sorted(lanche))
+print()
+print(lanche)
 
 print()
