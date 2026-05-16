@@ -15,24 +15,24 @@ for i in range(12):
       break
     except ValueError:
       print("Formato inválido")
-print()
-print(temperaturas) #checar apenas - debug
+
 print()
 def calcular_media(temperaturas):
   return sum(temperaturas) / len(temperaturas)
 
 media = calcular_media(temperaturas)
 print()
-print(media) #checar- debug
+print(f"A média anual é de {media:.1f}")
 print()
 acima = []
-for i, temp in range(len(temperaturas)):
+for i, temp in enumerate(temperaturas):
   if temp > media:
-    acima.append(meses[i], temp)
+    acima.append((meses[i], temp))
 
 if not acima:
-  print(f"Nenhum mes ficou acima da média de {media:.f}C")
+  print(f"Nenhum mes ficou acima da média de {media:.f} C")
 else:
-  #terminar o codigo. 
-
-#falta printar o mes-temperatura acima da média {informar media}
+  print("Meses acima da média: ")
+  for mes, temp in acima:
+    print(f"{mes} ({temp:.1f}C)")
+print()
