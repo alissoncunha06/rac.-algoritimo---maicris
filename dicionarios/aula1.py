@@ -1,6 +1,9 @@
-formula1 = {
-  "Equipe": "Ferrari", "Piloto 1": "Leclerc", "Piloto 2": "Hamilton"
-}
+print()
+brasil = []
+estado1 = {"UF": "Rio de Janeiro", "Sigla": "RJ"}
+estado2 = {"UF": "São Paulo", "Sigla": "SP"}
+brasil.append(estado1)
+brasil.append(estado2)
 
-for k,v in formula1.items():
-  print(f"{k} é {v}")
+print(brasil[0]["Sigla"])
+print()
