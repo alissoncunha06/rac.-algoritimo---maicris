@@ -10,50 +10,26 @@ pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser 
 "Inocente"
 """
 print()
-lista = []
-while True:
-  contato = input("Telefonou para a vítima? (s/n): ")
-  if contato == "s" or contato == "n":
-    lista.append(contato)
-    break
-  else:
-    print("Digite s ou n")
+perguntas = [
+  "Telefonou para a vítmia?", 
+  "Esteve no local da vítima?", 
+  "Mora perto da vítima?", 
+  "Devia para a vítmia?", 
+  "Já Trabalhou com a vítima?",
+]
+respostas = []
 
-while True:
-  local = input("Esteve no local do crime? (s/n): ")
-  if local =="s" or local == "n":
-    lista.append(local)
-    break
-  else:
-    print("Digite s ou n")
-
-while True:
-  morar = input("Mora perto da vítima? (s/n): ")
-  if morar == "s" or morar == "n":
-    lista.append(morar)
-    break
-  else:
-    print("Digite s ou n")
-
-while True:
-  dever = input("Devia para a vítima? (s/n): ")
-  if dever == "s" or dever == "n":
-    lista.append(dever)
-    break
-  else:
-    print("Digite s ou n")
-
-while True:
-  trabalhar = input("Já trabalhou com a vítima? (s/n): ")
-  if trabalhar == "s" or trabalhar == "n":
-    lista.append(trabalhar)
-    break
-  else:
-    print("Digite s ou n")
+for pergunta in perguntas:
+  while True:
+    resp = input(f"{pergunta} (s/n): ")
+    if resp in ("s", "n"):
+      respostas.append(resp)
+      break
+    print("Sigite s ou n")
 
 contador = 0
 
-for resposta in lista:
+for resposta in respostas:
   if resposta == "s":
     contador += 1
 
