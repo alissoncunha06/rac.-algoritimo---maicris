@@ -8,26 +8,40 @@ cardapio = {
   "X-Salada": ["Pão", "Hamburguer", "Tomate"], 
   "X-Bacon": ["Pão", "Hamburguer", "Tomate", "Bacon"], 
   "X-Egg": ["Pão", "Hamburguer", "Ovo"],
-  "X-Tudo": ["Pão", "Hamburguer", "Tomate", "Hamburguer", "Bacon", "ovo"]
+  "X-Tudo": ["Pão", "Hamburguer", "Tomate", "Hamburguer", "Bacon", "Ovo"]
 }
-
-print("=-="*15, "MENU", "=-="*15)
-
 def imprimir_cardapio(cardapio):
-  numero = 1
+  print("=-="*10, "MENU", "=-="*10)
+  contador = 1
   for comida in cardapio:
     ingredientes = ", ".join(cardapio[comida])
-    print(numero, "-", comida, "->", ingredientes)
-    numero = numero +1
-imprimir_cardapio(cardapio)
+    print(f"{contador}: {comida} - {ingredientes}")
+    contador += 1
 
-def pedir_msg():
+def verificar_estoque(estoque, ingredientes):
+  faltantes = []
+  for ingrediente in ingredientes:
+    quantidade_necessaria = ingredientes.count(ingrediente)
+    if estoque[ingrediente] < quantidade_necessaria:
+      faltantes.append(ingrediente)
+  return faltantes
+
+def executar_pedido():
+  pass
+
+def main():
   while True:
-    pergunta= int(input("O que deseja pedir? "))
-    if pergunta = "0":
+    pergunta = input("O que você deseja pedir? ")
+    if pergunta == "0":
       break
     elif pergunta not in cardapio:
-      print("Item não localizado no cardápio")
-      #terminar o codigo pra chamar o pedido dentro do cardapio
+      print("Item não encontrado")
+    else:
+      pass #chamar funcao pra executar o pedido
+    imprimir_cardapio(cardapio)#1. mostrar o cardapio
+    #2. Perguntar o pedido e 0 pra sair
+    #3. Verificar se o item está no cardapio e avisar
+    #4. Se existir no cardápio, tentar preparar
+    #5. repetir
 
- 
+main()
