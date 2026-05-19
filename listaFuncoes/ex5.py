@@ -12,11 +12,12 @@ def custo():
 def taxaimposto():
     while True:
         try:
-            imposto = float(input("Insira, em porcentagem (ex: 0.15 para 15%), o imposto: ")) #arrumar aqui, pedir o imposto normal e dividir por 100 dentro da funcao
+            imposto = float(input("Insira o imposto (ex: 15 para 15%): ")) #arrumar aqui, pedir o imposto normal e dividir por 100 dentro da funcao
+
             if imposto < 0:
                 print("Deve ser acima de 0")
             else:
-                return imposto
+                return imposto / 100
         except ValueError:
             print("Formato inválido")
 
